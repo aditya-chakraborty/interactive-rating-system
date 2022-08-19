@@ -1,38 +1,147 @@
-.App {
+:root {
+  /* colors */
+  --primary-orange: hsl(25, 97%, 53%);
+  --light-grey: hsl(217, 12%, 63%);
+  --medium-grey: hsl(216, 12%, 54%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --very-dark-blue: hsl(216, 12%, 8%);
+  --White: hsl(0, 0%, 100%);
+
+  /* font size */
+  --font-primary: 15px;
+
+  /* font weight */
+  --weight-medium: 400;
+  --weight-heavy: 700;
+}
+
+* {
+  box-sizing: border-box;
+  transition: all 250ms ease-in;
+}
+
+h1 {
+  color: var(--White);
+  font-family: "Overpass", sans-serif;
+  font-weight: var(--weight-heavy);
+}
+
+p {
+  color: var(--light-grey);
+  font-family: 'Overpass', sans-serif;
+}
+
+.body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: var(--very-dark-blue);
+
+}
+
+.btn__rating {
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+  background-color: var(--dark-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  border: none;
+  font-size: 1.1rem;
+  color: var(--White);
+  cursor: pointer;
+}
+
+.btn__rating:hover {
+  background-color: var(--primary-orange);
+  color: var(--White);
+}
+
+.btn__rating:focus {
+  background-color: var(--light-grey);
+  color: var(--White);
+}
+
+.card {
+  max-width: 400px;
+  padding: 25px;
+  background: linear-gradient(120deg, var(--very-dark-blue), var(--dark-blue));
+  border-radius: 15px;
+}
+
+.icon {
+  border-radius: 25px;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  background-color: var(--dark-blue);
+  justify-content: center;
+  align-items: center;
+}
+
+.ratings {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  margin: 0;
+}
+
+.ratings li {
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  background-color: var(--White);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.btn__submit {
+  height: 45px;
+  width: 100%;
+  border-radius: 25px;
+  margin-top: 20px;
+  background-color: var(--primary-orange);
+  color: var(--White);
+  cursor: pointer;
+  font-size: var(--font-primary);
+  font-weight: var(--weight-medium);
+  letter-spacing: 0.15rem;  
+  border: none;
+  outline: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.btn__submit:hover {
+  background-color: var(--White);
+  color: var(--primary-orange);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card__submit {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.card__submit h1 {
+  margin: 0;
+  padding: 8px 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card__submit p {
+  text-align: center;
+}
+
+.submission__info {
+  background-color: var(--dark-blue);
+  border-radius: 15px;
+  color: var(--primary-orange);
+  padding: 4px 15px;
+  padding-top: 8px;
+  text-align: center;
+  width: max-content;
 }
